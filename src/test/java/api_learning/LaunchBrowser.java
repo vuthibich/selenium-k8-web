@@ -26,7 +26,7 @@ public class LaunchBrowser {
 
         WebDriver driver = new ChromeDriver(chromeOptions);
         //driver.manage().window().maximize();
-        driver.get("https://learn.sdetpro.com");
+        driver.get("https://tiki.com/");
 
         //DEBUG
         try {
