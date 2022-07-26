@@ -40,7 +40,7 @@ public class FormInteraction {
 
             // Refresh page
             driver.navigate().refresh();
-            
+
             Thread.sleep(2000);
         }catch (Exception e){
             e.printStackTrace();

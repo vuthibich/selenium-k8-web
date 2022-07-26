@@ -9,9 +9,10 @@ import java.util.List;
 
 public class FormInteractionMultipleMatching {
     public static void main(String[] args) {
+        // Get a chrome session
         WebDriver driver = DriverFactory.getChromeDriver();
 
-        try {// Get a chrome session
+        try {
 
             //Navigate to the target page
             driver.get("https://the-internet.herokuapp.com/login");
