@@ -7,35 +7,39 @@ import org.openqa.selenium.WebElement;
 import url.Urls;
 
 public class IFrame implements Urls {
+
     public static void main(String[] args) {
+
         // Get a chrome session
         WebDriver driver = DriverFactory.getChromeDriver();
 
         try {
-            //Navigate to target base
+            // Navigate to target base
             driver.get(baseUrl.concat(iframeSlug));
 
-            //Locate the iframe
-            By iFrameSel =By.cssSelector("[id$='ifr']");
-            WebElement iFrameElem=driver.findElement(iFrameSel);
+            // Locate the iframe
+            By iFrameSel = By.cssSelector("[id$='ifr']");
+            WebElement iFrameElem = driver.findElement(iFrameSel);
 
-            //Switch to the iframe
+            // Switch to the iframe
             driver.switchTo().frame(iFrameElem);
 
-            //Locate element inside the Iframe
-            WebElement editorInputElem= driver.findElement(By.id("tinymce"));
+            // Locate element inside the iframe
+            WebElement editorInputElem = driver.findElement(By.id("tinymce"));
             editorInputElem.click();
             editorInputElem.clear();
-            editorInputElem.sendKeys("This is the new text value.... ");
+            editorInputElem.sendKeys("This is the new text value........");
             Thread.sleep(1000);
 
-            //Switch back parent frame
+            // Switch back parent frame
             driver.switchTo().defaultContent();
             driver.findElement(By.linkText("Elemental Selenium")).click();
+            Thread.sleep(1000);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         driver.quit();
     }
 }

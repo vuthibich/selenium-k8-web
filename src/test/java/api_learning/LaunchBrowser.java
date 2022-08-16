@@ -6,34 +6,39 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class LaunchBrowser {
-    public static void main(String[] args) {
-            String curentProjectLocation = System.getProperty("user.dir");
-            String chromeDriverLocation = "";
-        if(OS.isFamilyMac()){
-            chromeDriverLocation = curentProjectLocation + "/sr/test/resource/drivers/chromedriver";
-            }
-            if(OS.isFamilyWindows()){
-                chromeDriverLocation = curentProjectLocation + "\\src\\test\\resources\\drivers\\chromedriver.exe";
 
-            }
-            if(chromeDriverLocation.isEmpty()){
-    throw  new IllegalArgumentException("Can't detect OS type");
-            }
-            System.setProperty("webdriver.chrome.driver", chromeDriverLocation);
-            ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--incognito");
-            chromeOptions.addArguments("--start-maximized");
+    public static void main(String[] args) {
+        String currentProjectLocation = System.getProperty("user.dir");
+        String chromeDriverLocation = "";
+        if (OS.isFamilyMac()) {
+            chromeDriverLocation = currentProjectLocation + "/src/test/resources/drivers/chromedriver";
+        }
+
+        if (OS.isFamilyWindows()) {
+            chromeDriverLocation = currentProjectLocation + "\\src\\test\\resources\\drivers\\chromedriver.exe";
+        }
+
+        if (chromeDriverLocation.isEmpty()) {
+            throw new IllegalArgumentException("Can't detect OS type!");
+        }
+
+        System.setProperty("webdriver.chrome.driver", chromeDriverLocation);
+
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--incognito");
+
 
         WebDriver driver = new ChromeDriver(chromeOptions);
-        //driver.manage().window().maximize();
-        driver.get("https://tiki.com/");
+//        driver.manage().window().maximize();
+        driver.get("https://learn.sdetpro.com");
 
-        //DEBUG
+        // DEBUG PURPOSE ONLY
         try {
             Thread.sleep(3000);
-        }catch ( Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
 
         driver.quit();
 
