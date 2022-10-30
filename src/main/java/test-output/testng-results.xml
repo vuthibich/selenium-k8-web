@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="8" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression" duration-ms="98638" started-at="2022-09-16T20:22:09 CDT" finished-at="2022-09-16T20:23:47 CDT">
+    <groups>
+    </groups>
+    <test name="Group 3" duration-ms="11" started-at="2022-09-16T20:22:09 CDT" finished-at="2022-09-16T20:22:09 CDT">
+    </test> <!-- Group 3 -->
+    <test name="Group 4" duration-ms="22537" started-at="2022-09-16T20:22:09 CDT" finished-at="2022-09-16T20:22:31 CDT">
+      <class name="test.global.footer.FooterTest">
+        <test-method status="PASS" signature="initBrowserSession(java.lang.String)[pri:0, instance:test.global.footer.FooterTest@229d10bd]" name="initBrowserSession" is-config="true" duration-ms="13" started-at="2022-09-16T20:22:09 CDT" description="Init browser session" finished-at="2022-09-16T20:22:09 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowserSession -->
+        <test-method status="FAIL" signature="testFooterCategoryPage()[pri:0, instance:test.global.footer.FooterTest@229d10bd]" name="testFooterCategoryPage" duration-ms="12437" started-at="2022-09-16T20:22:09 CDT" finished-at="2022-09-16T20:22:21 CDT">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Demo taking screenshot when test is failed!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Demo taking screenshot when test is failed!
+at org.testng.Assert.fail(Assert.java:110)
+at test.global.footer.FooterTest.testFooterCategoryPage(FooterTest.java:16)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooterCategoryPage -->
+        <test-method status="PASS" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:test.global.footer.FooterTest@229d10bd]" name="captureScreenshot" is-config="true" duration-ms="4626" started-at="2022-09-16T20:22:21 CDT" finished-at="2022-09-16T20:22:26 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFooterCategoryPage status=FAILURE method=FooterTest.testFooterCategoryPage()[pri:0, instance:test.global.footer.FooterTest@229d10bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method status="FAIL" signature="testFooterHomePage()[pri:0, instance:test.global.footer.FooterTest@229d10bd]" name="testFooterHomePage" duration-ms="2632" started-at="2022-09-16T20:22:26 CDT" finished-at="2022-09-16T20:22:29 CDT">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[ERR] Actual and expected hyperlinks are different!: Lists differ at element [0]: http://demowebshop.tricentis.com/sitemap != https://demowebshop.tricentis.com/sitemap expected [http://demowebshop.tricentis.com/sitemap] but found [https://demowebshop.tricentis.com/sitemap]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [ERR] Actual and expected hyperlinks are different!: Lists differ at element [0]: http://demowebshop.tricentis.com/sitemap != https://demowebshop.tricentis.com/sitemap expected [http://demowebshop.tricentis.com/sitemap] but found [https://demowebshop.tricentis.com/sitemap]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:1479)
+at test_flows.global.FooterTestFlow.verifyFooterColumn(FooterTestFlow.java:127)
+at test_flows.global.FooterTestFlow.verifyInformationColumn(FooterTestFlow.java:48)
+at test_flows.global.FooterTestFlow.verifyFooterComponent(FooterTestFlow.java:34)
+at test.global.footer.FooterTest.testFooterHomePage(FooterTest.java:26)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooterHomePage -->
+        <test-method status="PASS" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:test.global.footer.FooterTest@229d10bd]" name="captureScreenshot" is-config="true" duration-ms="1958" started-at="2022-09-16T20:22:29 CDT" finished-at="2022-09-16T20:22:31 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFooterHomePage status=FAILURE method=FooterTest.testFooterHomePage()[pri:0, instance:test.global.footer.FooterTest@229d10bd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method status="PASS" signature="closeBrowserSession()[pri:0, instance:test.global.footer.FooterTest@229d10bd]" name="closeBrowserSession" is-config="true" duration-ms="635" started-at="2022-09-16T20:22:31 CDT" finished-at="2022-09-16T20:22:31 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+      </class> <!-- test.global.footer.FooterTest -->
+    </test> <!-- Group 4 -->
+    <test name="Group 2" duration-ms="98596" started-at="2022-09-16T20:22:09 CDT" finished-at="2022-09-16T20:23:47 CDT">
+      <class name="test.computer.BuyingCheapComputerTest">
+        <test-method status="PASS" signature="initBrowserSession(java.lang.String)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f]" name="initBrowserSession" is-config="true" duration-ms="13" started-at="2022-09-16T20:22:09 CDT" description="Init browser session" finished-at="2022-09-16T20:22:09 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowserSession -->
+        <test-method status="PASS" signature="testCheapComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f]" name="testCheapComputerBuying" duration-ms="56905" started-at="2022-09-16T20:22:09 CDT" data-provider="computerData" finished-at="2022-09-16T20:23:06 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ComputerData{processorType='Fast', ram='8 GB', os='null', hdd='320 GB', software='Image Viever'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheapComputerBuying -->
+        <test-method status="PASS" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f]" name="captureScreenshot" is-config="true" duration-ms="1" started-at="2022-09-16T20:23:06 CDT" finished-at="2022-09-16T20:23:06 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCheapComputerBuying status=SUCCESS method=BuyingCheapComputerTest.testCheapComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method status="PASS" signature="testCheapComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f]" name="testCheapComputerBuying" duration-ms="20245" started-at="2022-09-16T20:23:06 CDT" data-provider="computerData" finished-at="2022-09-16T20:23:26 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ComputerData{processorType='Fast', ram='4 GB', os='null', hdd='400 GB', software='Office Suite'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheapComputerBuying -->
+        <test-method status="PASS" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f]" name="captureScreenshot" is-config="true" duration-ms="1" started-at="2022-09-16T20:23:26 CDT" finished-at="2022-09-16T20:23:26 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCheapComputerBuying status=SUCCESS method=BuyingCheapComputerTest.testCheapComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method status="PASS" signature="testCheapComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f]" name="testCheapComputerBuying" duration-ms="20427" started-at="2022-09-16T20:23:26 CDT" data-provider="computerData" finished-at="2022-09-16T20:23:46 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ComputerData{processorType='Fast', ram='2 GB', os='null', hdd='320 GB', software='Other Office Suite'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheapComputerBuying -->
+        <test-method status="PASS" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f]" name="captureScreenshot" is-config="true" duration-ms="1" started-at="2022-09-16T20:23:46 CDT" finished-at="2022-09-16T20:23:46 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCheapComputerBuying status=SUCCESS method=BuyingCheapComputerTest.testCheapComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method status="PASS" signature="closeBrowserSession()[pri:0, instance:test.computer.BuyingCheapComputerTest@2133814f]" name="closeBrowserSession" is-config="true" duration-ms="919" started-at="2022-09-16T20:23:46 CDT" finished-at="2022-09-16T20:23:47 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+      </class> <!-- test.computer.BuyingCheapComputerTest -->
+    </test> <!-- Group 2 -->
+    <test name="Group 1" duration-ms="98638" started-at="2022-09-16T20:22:09 CDT" finished-at="2022-09-16T20:23:47 CDT">
+      <class name="test.computer.BuyingStandardComputerTest">
+        <test-method status="PASS" signature="initBrowserSession(java.lang.String)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7]" name="initBrowserSession" is-config="true" duration-ms="13" started-at="2022-09-16T20:22:09 CDT" description="Init browser session" finished-at="2022-09-16T20:22:09 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowserSession -->
+        <test-method status="PASS" signature="testStandardComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7]" name="testStandardComputerBuying" duration-ms="56414" started-at="2022-09-16T20:22:09 CDT" data-provider="computerData" finished-at="2022-09-16T20:23:05 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ComputerData{processorType='2.2GHz', ram='8GB', os='Ubuntu', hdd='400 GB', software='Microsoft Office'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStandardComputerBuying -->
+        <test-method status="PASS" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7]" name="captureScreenshot" is-config="true" duration-ms="1" started-at="2022-09-16T20:23:05 CDT" finished-at="2022-09-16T20:23:05 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testStandardComputerBuying status=SUCCESS method=BuyingStandardComputerTest.testStandardComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method status="PASS" signature="testStandardComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7]" name="testStandardComputerBuying" duration-ms="20228" started-at="2022-09-16T20:23:05 CDT" data-provider="computerData" finished-at="2022-09-16T20:23:26 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ComputerData{processorType='2.5GHz', ram='4GB', os='Windows 7', hdd='320 GB', software='Acrobat Reader'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStandardComputerBuying -->
+        <test-method status="PASS" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7]" name="captureScreenshot" is-config="true" duration-ms="1" started-at="2022-09-16T20:23:26 CDT" finished-at="2022-09-16T20:23:26 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testStandardComputerBuying status=SUCCESS method=BuyingStandardComputerTest.testStandardComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method status="PASS" signature="testStandardComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7]" name="testStandardComputerBuying" duration-ms="20939" started-at="2022-09-16T20:23:26 CDT" data-provider="computerData" finished-at="2022-09-16T20:23:46 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ComputerData{processorType='2.2GHz', ram='2GB', os='Windows 10', hdd='320 GB', software='Total Commander'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStandardComputerBuying -->
+        <test-method status="PASS" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7]" name="captureScreenshot" is-config="true" duration-ms="1" started-at="2022-09-16T20:23:46 CDT" finished-at="2022-09-16T20:23:46 CDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testStandardComputerBuying status=SUCCESS method=BuyingStandardComputerTest.testStandardComputerBuying(test_data.computer.ComputerData)[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method status="PASS" signature="closeBrowserSession()[pri:0, instance:test.computer.BuyingStandardComputerTest@77167fb7]" name="closeBrowserSession" is-config="true" duration-ms="954" started-at="2022-09-16T20:23:46 CDT" finished-at="2022-09-16T20:23:47 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+      </class> <!-- test.computer.BuyingStandardComputerTest -->
+    </test> <!-- Group 1 -->
+  </suite> <!-- Regression -->
+</testng-results>

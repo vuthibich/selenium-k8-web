@@ -80,18 +80,20 @@ public class Main {
         // Add all tests into suite
         boolean isTestingOnSafari = browser.equals("safari");
         suite.setTests(allTests);
-        suite.setParallel(XmlSuite.ParallelMode.TESTS);
-        suite.setThreadCount(isTestingOnSafari ? 1 : MAX_PARALLEL_SESSION);
+        if(!isTestingOnSafari) {
+            suite.setParallel(XmlSuite.ParallelMode.TESTS);
+            suite.setThreadCount(MAX_PARALLEL_SESSION);
+        }
 
         // Run a group of test
-        if(isTestingOnSafari){
-            suite.addIncludedGroup("smoke");
-        } else {
-            String targetGroup = args.length !=0 ? args[0] : null;
-            if(targetGroup != null){
-                suite.addIncludedGroup(targetGroup);
-            }
-        }
+//        if(isTestingOnSafari){
+//            suite.addIncludedGroup("smoke");
+//        } else {
+//            String targetGroup = args.length !=0 ? args[0] : null;
+//            if(targetGroup != null){
+//                suite.addIncludedGroup(targetGroup);
+//            }
+//        }
 
         System.out.println(suite.toXml());
 
