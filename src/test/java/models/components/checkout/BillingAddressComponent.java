@@ -1,6 +1,5 @@
 package models.components.checkout;
 
-import io.qameta.allure.Step;
 import models.components.Component;
 import models.components.ComponentCssSelector;
 import org.openqa.selenium.By;
